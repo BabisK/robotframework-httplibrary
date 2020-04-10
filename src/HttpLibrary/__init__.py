@@ -503,7 +503,7 @@ class HTTP(object):
         if isinstance(credentials, str):
             credentials = credentials.encode()
         self.set_request_header(
-            "Authorization", "Basic %s" % b64encode(credentials))
+            "Authorization", "Basic %s" % b64encode(credentials).decode('utf-8'))
 
     # payload
 
